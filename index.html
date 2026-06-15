@@ -131,7 +131,14 @@
 
   .porq-card{position:relative;background:rgba(255,255,255,.03);border:1px solid var(--outline);border-radius:var(--r-xl);padding:30px 26px;transition:transform .2s,border-color .2s,box-shadow .2s;}
   .porq-card:hover{transform:translateY(-5px);border-color:rgba(0,229,255,.45);box-shadow:0 18px 50px -20px rgba(0,229,255,.4);}
-  .porq-vs{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--red);margin-bottom:10px;padding:4px 10px;border-radius:var(--r-full);background:rgba(255,107,107,.12);}
+  .porq-vs{display:flex;flex-direction:column;gap:9px;margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid var(--outline);}
+  .porq-vs-row{display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:600;line-height:1.3;}
+  .porq-vs-row svg{width:18px;height:18px;flex-shrink:0;}
+  .porq-vs-row b{font-weight:800;}
+  .porq-bad{color:var(--t2);}
+  .porq-bad svg,.porq-bad b{color:var(--red);}
+  .porq-good{color:var(--t1);}
+  .porq-good svg,.porq-good b{color:var(--cyan);}
   .porq-card h3{font-size:17px;font-weight:800;margin-bottom:9px;letter-spacing:-.01em;}
   .porq-card p{font-size:13.5px;color:var(--t2);line-height:1.65;}
   .porq-card .check{color:var(--cyan);font-weight:700;}
@@ -314,17 +321,26 @@
     <p class="sec-sub">La mayoría te llena de pantallas, te pide cuenta y termina cobrándote por seguir tus propios hábitos.</p>
     <div class="porq-grid">
       <div class="porq-card">
-        <div class="porq-vs">vs apps que cobran</div>
+        <div class="porq-vs">
+          <div class="porq-vs-row porq-bad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg><span><b>Otras apps</b> te cobran suscripción</span></div>
+          <div class="porq-vs-row porq-good"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 6.5"/></svg><span><b>Rachas</b> es gratis, siempre</span></div>
+        </div>
         <h3>Cero suscripciones. Para siempre.</h3>
         <p>Todas las funciones, sin límite de hábitos, sin "premium". <span class="check">Gratis de verdad, desde el primer día.</span></p>
       </div>
       <div class="porq-card">
-        <div class="porq-vs">vs apps que piden cuenta</div>
+        <div class="porq-vs">
+          <div class="porq-vs-row porq-bad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg><span><b>Otras apps</b> piden cuenta y email</span></div>
+          <div class="porq-vs-row porq-good"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 6.5"/></svg><span><b>Rachas</b> no te pide nada</span></div>
+        </div>
         <h3>Tus datos son solo tuyos.</h3>
         <p>Todo se guarda en tu teléfono. Sin emails, sin contraseñas, sin servidores ajenos. <span class="check">Privacidad real.</span></p>
       </div>
       <div class="porq-card">
-        <div class="porq-vs">vs apps complicadas</div>
+        <div class="porq-vs">
+          <div class="porq-vs-row porq-bad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg><span><b>Otras apps</b> son un quilombo</span></div>
+          <div class="porq-vs-row porq-good"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 6.5"/></svg><span><b>Rachas</b> es un toque por día</span></div>
+        </div>
         <h3>Simple a propósito.</h3>
         <p>Una pantalla, tus hábitos, un toque por día. <span class="check">10 segundos y seguiste tu racha.</span></p>
       </div>
