@@ -140,7 +140,9 @@
   .features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
   .feat{position:relative;background:rgba(255,255,255,.03);border:1px solid var(--outline);border-radius:var(--r-xl);padding:26px;display:flex;flex-direction:column;gap:11px;transition:transform .2s,border-color .2s,background .2s,box-shadow .2s;overflow:hidden;}
   .feat:hover{transform:translateY(-5px);border-color:rgba(0,229,255,.45);background:rgba(0,229,255,.05);box-shadow:0 18px 50px -20px rgba(0,229,255,.4);}
-  .feat-icon{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;font-size:26px;background:rgba(0,229,255,.1);border:1px solid rgba(0,229,255,.2);}
+  .feat-icon{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;background:rgba(0,229,255,.1);border:1px solid rgba(0,229,255,.2);color:var(--cyan);transition:color .2s,background .2s,border-color .2s;}
+  .feat:hover .feat-icon{color:#bff8ff;background:rgba(0,229,255,.18);border-color:rgba(0,229,255,.5);}
+  .feat-icon svg{width:26px;height:26px;display:block;}
   .feat h4{font-size:15.5px;font-weight:800;letter-spacing:-.01em;}
   .feat p{font-size:13.5px;color:var(--t2);line-height:1.65;}
 
@@ -164,13 +166,15 @@
   .install-card{position:relative;max-width:600px;margin:0 auto;background:rgba(255,255,255,.03);border:1px solid var(--outline);border-radius:30px;padding:52px 44px;text-align:center;overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s;}
   .install-card:hover{transform:translateY(-5px);border-color:rgba(0,229,255,.45);box-shadow:0 18px 50px -20px rgba(0,229,255,.4);}
   .install-card::before{content:'';position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:300px;height:160px;background:var(--grad);filter:blur(70px);opacity:.35;}
-  .install-emoji{font-size:50px;margin-bottom:16px;position:relative;}
+  .install-emoji{margin:0 auto 16px;position:relative;color:var(--cyan);display:flex;justify-content:center;}
+  .install-emoji svg{width:50px;height:50px;display:block;}
   .install-card h2{font-size:1.9rem;font-weight:900;letter-spacing:-.03em;margin-bottom:10px;position:relative;}
   .install-card > p{font-size:15px;color:var(--t2);line-height:1.7;margin-bottom:30px;position:relative;}
   .install-os{display:flex;flex-direction:column;gap:11px;text-align:left;margin-bottom:34px;position:relative;}
   .install-row{display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.04);border:1px solid var(--outline);border-radius:var(--r-lg);padding:14px 16px;transition:transform .15s,border-color .15s,background .15s,box-shadow .15s;}
   .install-row:hover{transform:translateY(-3px);border-color:rgba(0,229,255,.45);background:rgba(0,229,255,.06);box-shadow:0 12px 32px -16px rgba(0,229,255,.4);}
-  .install-row-icon{font-size:21px;flex-shrink:0;margin-top:1px;}
+  .install-row-icon{flex-shrink:0;color:var(--cyan);}
+  .install-row-icon svg{width:26px;height:26px;display:block;}
   .install-row p{font-size:13.5px;color:var(--t2);line-height:1.6;}
   .install-row p strong{color:var(--t1);}
 
@@ -337,14 +341,14 @@
       <p class="sec-sub">Cada función existe para una sola cosa: que vuelvas mañana, y pasado, y el otro.</p>
     </div>
     <div class="features-grid">
-      <div class="feat"><div class="feat-icon">🔥</div><h4>Rachas</h4><p>Cada día que completás suma. Ver el número crecer es lo que te hace volver.</p></div>
-      <div class="feat"><div class="feat-icon">🏆</div><h4>Logros</h4><p>Desbloqueá hitos: 3, 7, 30, 100, 365 días. Cada uno con su celebración.</p></div>
-      <div class="feat"><div class="feat-icon">🎯</div><h4>Metas múltiples</h4><p>Hábitos con cantidad: 3 litros de agua, 2 de 3 tareas. No solo "hecho/no hecho".</p></div>
-      <div class="feat"><div class="feat-icon">🔔</div><h4>Recordatorios</h4><p>Avisos que insisten hasta que lo hacés, para que no se te escape ningún día.</p></div>
-      <div class="feat"><div class="feat-icon">🏖️</div><h4>Modo vacaciones</h4><p>¿Te vas unos días? Activá vacaciones y tus rachas quedan protegidas.</p></div>
-      <div class="feat"><div class="feat-icon">📊</div><h4>Estadísticas</h4><p>Mirá tu constancia en el tiempo y descubrí tus mejores rachas.</p></div>
-      <div class="feat"><div class="feat-icon">🗂️</div><h4>Categorías</h4><p>Organizá tus hábitos por grupos y mantené la lista ordenada.</p></div>
-      <div class="feat"><div class="feat-icon">📲</div><h4>Offline y gratis</h4><p>Funciona sin internet, se instala como app y no ocupa casi nada.</p></div>
+      <div class="feat"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2 -2.96 0 -7 -1 -8c0 3.038 -1.773 4.741 -3 6c-1.226 1.26 -2 3.24 -2 5a6 6 0 1 0 12 0c0 -1.532 -1.056 -3.94 -2 -5c-1.786 3 -2.791 3 -4 2z"/></svg></div><h4>Rachas</h4><p>Cada día que completás suma. Ver el número crecer es lo que te hace volver.</p></div>
+      <div class="feat"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div><h4>Logros</h4><p>Desbloqueá hitos: 3, 7, 30, 100, 365 días. Cada uno con su celebración.</p></div>
+      <div class="feat"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.3" fill="currentColor" stroke="none"/></svg></div><h4>Metas múltiples</h4><p>Hábitos con cantidad: 3 litros de agua, 2 de 3 tareas. No solo "hecho/no hecho".</p></div>
+      <div class="feat"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/><path d="M3.26 15.33A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.67C19.41 13.96 18 12.5 18 8A6 6 0 0 0 6 8c0 4.5-1.41 5.96-2.74 7.33"/></svg></div><h4>Recordatorios</h4><p>Avisos que insisten hasta que lo hacés, para que no se te escape ningún día.</p></div>
+      <div class="feat"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v2.2"/><path d="M7.4 8.7l1.4 1.6"/><path d="M16.6 8.7l-1.4 1.6"/><path d="M4.6 12.6l1.9 1"/><path d="M19.4 12.6l-1.9 1"/><path d="M8 16.5a4 4 0 0 1 8 0"/><path d="M3 16.5h18"/><path d="M5 20c1-.7 2-.7 3 0s2 .7 3 0 2-.7 3 0 2 .7 3 0"/></svg></div><h4>Modo vacaciones</h4><p>¿Te vas unos días? Activá vacaciones y tus rachas quedan protegidas.</p></div>
+      <div class="feat"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16h16"/><rect x="7.5" y="15" width="2.6" height="5" rx="0.6"/><rect x="11.7" y="12" width="2.6" height="8" rx="0.6"/><rect x="15.9" y="9" width="2.6" height="11" rx="0.6"/></svg></div><h4>Estadísticas</h4><p>Mirá tu constancia en el tiempo y descubrí tus mejores rachas.</p></div>
+      <div class="feat"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><rect x="13" y="13" width="7" height="7" rx="2"/></svg></div><h4>Categorías</h4><p>Organizá tus hábitos por grupos y mantené la lista ordenada.</p></div>
+      <div class="feat"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10.5 18.5h3"/><path d="M12 6v6"/><path d="M9.6 9.6l2.4 2.4 2.4-2.4"/></svg></div><h4>Offline y gratis</h4><p>Funciona sin internet, se instala como app y no ocupa casi nada.</p></div>
     </div>
   </div>
 </section>
@@ -387,16 +391,16 @@
 <section class="block">
   <div class="container reveal">
     <div class="install-card">
-      <div class="install-emoji">📲</div>
+      <div class="install-emoji"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10.5 18.5h3"/><path d="M12 6v6"/><path d="M9.6 9.6l2.4 2.4 2.4-2.4"/></svg></div>
       <h2>Instalala como app</h2>
       <p>Rachas es una PWA. Se instala en segundos, funciona sin internet y ocupa menos de 1 MB. Sin App Store, sin Google Play.</p>
       <div class="install-os">
         <div class="install-row">
-          <div class="install-row-icon">🍎</div>
+          <div class="install-row-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09z"/><path d="M15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.464 2.338-1.282 3.714 1.345.104 2.726-.688 3.57-1.701z"/></svg></div>
           <p><strong>iPhone / iPad:</strong> Safari → botón compartir ⎙ → "Agregar a pantalla de inicio"</p>
         </div>
         <div class="install-row">
-          <div class="install-row-icon">🤖</div>
+          <div class="install-row-icon"><svg viewBox="0 0 24 24" fill="currentColor" style="width:30px;height:30px"><path d="M9 4.4 7.6 2.6" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" fill="none"/><path d="M15 4.4 16.4 2.6" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" fill="none"/><path d="M6.5 9.2A5.5 5.5 0 0 1 17.5 9.2Z"/><circle cx="10" cy="6.9" r=".75" fill="#050507"/><circle cx="14" cy="6.9" r=".75" fill="#050507"/><rect x="6.5" y="10" width="11" height="7.6" rx="1.4"/><rect x="3.4" y="10.4" width="2.5" height="6" rx="1.25"/><rect x="18.1" y="10.4" width="2.5" height="6" rx="1.25"/><rect x="8.6" y="16.6" width="2.5" height="4.4" rx="1.25"/><rect x="12.9" y="16.6" width="2.5" height="4.4" rx="1.25"/></svg></div>
           <p><strong>Android:</strong> Chrome → menú ⋮ → "Agregar a pantalla de inicio" o aceptá el banner automático</p>
         </div>
       </div>
